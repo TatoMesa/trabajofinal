@@ -61,6 +61,7 @@ class NoticiaController extends Controller
     public function edit(noticia $noticia)
     {
         //
+        return view('noticia.edit');
     }
 
     /**

@@ -1,0 +1,30 @@
+
+h1{
+    background-color: $primario;
+    color: $destacado;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.preheader{
+    background-color: $textoPlano;
+    color: $destacado;
+}
+
+
+.mynavbar{
+    background-color: $destacado;
+    
+   
+}
+
+.nav-link {
+    color: $textoPlano;
+    font-size: large;
+}
+
+.navbar-expand-sm .navbar-collapse {
+    flex-direction: row-reverse;
+ 
+    
+}
