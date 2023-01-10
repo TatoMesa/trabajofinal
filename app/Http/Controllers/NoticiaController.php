@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\noticia;
 use Illuminate\Http\Request;
+use PhpParser\Node\Expr\PreDec;
 
 class NoticiaController extends Controller
 {
@@ -39,6 +40,13 @@ class NoticiaController extends Controller
     public function store(Request $request)
     {
         //
+        $noticia = request()->except('_token');
+        if ($request->hasFile('Foto')){
+            $noticia['Foto']=$request->file('Foto')->store('uploads','public');
+        }
+            noticia::insert($noticia);
+        return redirect('noticia/create')->with('mensaje','Noticia creada satisfactoriamente.');
+        
     }
 
     /**

@@ -6,6 +6,7 @@
     @include ("./partials/header")
     
     <body>
+      
        @include ("./partials/sectionNoticia")
       
       

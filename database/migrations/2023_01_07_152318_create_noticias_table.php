@@ -17,8 +17,10 @@ return new class extends Migration
             $table->id();
             $table->string('Titulo');
             $table->string('Foto');
-            $table->longText('Cuerpo');
-            $table->string('Categoria');
+            $table->string('Categorias');
+            $table->string('subTitulo');
+            $table->longText('Contenido');
+            
             $table->timestamps();
         });
     }
