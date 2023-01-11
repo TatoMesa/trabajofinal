@@ -15,7 +15,10 @@ use App\Http\Controllers\NoticiaController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $noticias = Noticia::all();
+    return view('welcome', '$noticias' );
+
+
 });
 
 Route::resource('noticia',NoticiaController::class);

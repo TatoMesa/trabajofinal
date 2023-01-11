@@ -2,7 +2,7 @@
  @include ("./partials/head")
  @include ("./partials/header")
 
-
+    
     <h3>Creacion de Noticias </h3>
     <form class="form-Noticias" method="POST" action="{{url('noticia')}}" enctype="multipart/form-data">
       @csrf
@@ -20,11 +20,12 @@
           <label class="input-group-text" for="Categorias">Categorias: </label>
           <select class="form-select" name="Categorias" id="Categorias">
             <option selected>...</option>
-            
-                                     
-            @for ($i = 0; $i < ; $i++)
-              <option value="$i"> $categroias[$i] </option>
-            @endfor
+            <option value="Deportes" > Deportes </option>
+            <option value="Politica" > Politica </option>
+            <option value="Actualidad" > Actualidad </option>
+            <option value="Naturaleza" > Naturaleza </option>
+            <option value="Economia" > Economia </option>
+            <option value="Espectaculos" > Espectaculos </option>
           </select>
       </div>
 
@@ -37,11 +38,12 @@
         <span class="input-group-text" for="Contenido">Contenido: </span>
         <input type="text" class="form-control" name="Contenido" id="Contenido">
       </div>
-
-      <input class="btn btn-lg finalizar" type="submit" value="Finalizar">
-    
+      <div class="input-group mb-3 butongroup">
+        <input class="btn btn-lg finalizar" type="submit" value="Almacenar">
+        <a href="{{url('')}}" class="btn btn-lg finalizar" > Finalizar </a>
+      </div>
     </form>
-
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
 @include ("./partials/footer")

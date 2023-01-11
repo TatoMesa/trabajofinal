@@ -27,13 +27,14 @@ class NoticiaController extends Controller
     public function create()
     {
         //
-        return view('noticia.create');
+        return view('noticia/create');
 
     }
 
     /**
      * Store a newly created resource in storage.
      *
+     * 
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
@@ -44,7 +45,7 @@ class NoticiaController extends Controller
         if ($request->hasFile('Foto')){
             $noticia['Foto']=$request->file('Foto')->store('uploads','public');
         }
-            noticia::insert($noticia);
+        noticia::insert($noticia);
         return redirect('noticia/create')->with('mensaje','Noticia creada satisfactoriamente.');
         
     }

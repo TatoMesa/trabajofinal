@@ -27,6 +27,10 @@ h3{
 .finalizar{
     background-color: $primario;
     color: $destacado;
-    margin-left: 40%;
     padding: (15px 55px 15px 55px);    
+}
+
+.butongroup{
+    align-items: center;
+    justify-content:center;
 }
