@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NoticiaController;
+use App\Models\noticia;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +17,7 @@ use App\Http\Controllers\NoticiaController;
 
 Route::get('/', function () {
     $noticias = Noticia::all();
-    return view('welcome', '$noticias' );
+    return view('welcome', compact('noticias' ));
 
 
 });
