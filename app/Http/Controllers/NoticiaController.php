@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\noticia;
 use Illuminate\Http\Request;
 use PhpParser\Node\Expr\PreDec;
+use Illuminate\Support\Facades\Storage;
 
 class NoticiaController extends Controller
 {

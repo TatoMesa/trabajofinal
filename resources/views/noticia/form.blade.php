@@ -1,18 +1,18 @@
 @csrf
 <div class="input-group mb-3">
     <span class="input-group-text" id="basic-addon1" for="Titulo">Titulo: </span>
-    <input type="text" class="form-control" name="Titulo" id="Titulo" value="{{isset($noticia->Titulo) ? $noticia->Titulo : ''}}">
+    <input type="text" class="form-control" name="Titulo" id="Titulo" value={{isset($noticia->Titulo) ? $noticia->Titulo : ''}}>
 </div>
 
 <div class="input-group mb-3">
     <span class="input-group-text" id="basic-addon1" for="Foto">Foto: </span>
-    <input type="file" class="form-control" name="Foto" id="Foto" value="{{isset($noticia->Foto) ? $noticia->Foto : ''}}">
+    <input type="file" class="form-control" name="Foto" id="Foto" value={{isset($noticia->Foto) ? $noticia->Foto : ''}}>
 </div>
 
 <div class="input-group mb-3">
     <label class="input-group-text" for="Categorias">Categorias: </label>
-    <select class="form-select" name="Categorias" id="Categorias" value="{{isset($noticia->Categorias) ? $noticia->Categorias : ''}}">
-      <option selected>...</option>
+    <select class="form-select" name="Categorias" id="Categorias" >
+      <option selected> {{isset($noticia->Categorias) ? $noticia->Categorias : ''}} </option>
       <option value="Deportes" > Deportes </option>
       <option value="Politica" > Politica </option>
       <option value="Actualidad" > Actualidad </option>
