@@ -61,7 +61,8 @@ class NoticiaController extends Controller
      */
     public function show(noticia $noticia)
     {
-        //
+        // Visualizar cada noticia por separado
+        
     }
 
     /**
