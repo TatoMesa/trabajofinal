@@ -3,7 +3,7 @@ h1{
     background-color: $primario;
     color: $destacado;
     padding: 10px;
-    margin-left: 20px;
+    margin: 20px 30px 20px 10px;
 }
 
 .preheader{
@@ -14,6 +14,7 @@ h1{
 
 .mynavbar{
     background-color: $destacado;
+    height: 80px;
     
    
 }
@@ -25,6 +26,7 @@ h1{
 
 .navbar-expand-sm .navbar-collapse {
     flex-direction: row-reverse;
+    align-items: center;
  
     
 }

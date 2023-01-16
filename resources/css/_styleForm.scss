@@ -1,6 +1,7 @@
 
 body{
-    padding:30px;
+    margin:0;
+    padding:0;
     
 }
 
@@ -21,12 +22,13 @@ h3{
 
 .input-group-text{
     background-color: $destacado;
-    color: var$textoPlano; 
+    color: $textoPlano; 
 }
 
 .finalizar{
     background-color: $primario;
     color: $destacado;
+    font-size: x-large;
     padding: (15px 55px 15px 55px);    
 }
 
@@ -34,3 +36,4 @@ h3{
     align-items: center;
     justify-content:center;
 }
+

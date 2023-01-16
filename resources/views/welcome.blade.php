@@ -5,12 +5,12 @@
       <section class= "noticias">
         @foreach ($noticias as $noticia)
           <div class="noticia" >
-            <h2> {{$noticia->Titulo}} </h2>
-            <img src= {{asset('/storage/'.'/', $noticia->Foto)}} alt="" >
-            <div>
-              <h4> {{$noticia->subTitulo}} </h4>
+            <h4> {{$noticia->Titulo}} </h4>
+            <div class="imagen" style="aspect-ratio: 16 / 9; background-size: contain;">
+                <img src= "{{asset('storage').'/'. $noticia->Foto }}" alt="" >
             </div>
-            <div>
+            <h5> {{$noticia->subTitulo}} </h5>
+            <div class= "bajada">
               {{$noticia->Contenido}}
             </div>
           </div>

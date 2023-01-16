@@ -1,0 +1,18 @@
+.myTable{
+    padding: (10px 30px 30px);
+}
+
+.twoButons{
+    display:flex;
+    flex-wrap: nowrap;
+    text-align: center;
+    align-items: center;
+   
+}
+
+.btn-sm{
+    background-color: $primario;
+    color: $destacado;
+    font-size: small;
+    padding: 1px;  
+}

@@ -16,7 +16,10 @@ class NoticiaController extends Controller
     public function index()
     {
         //
-        return view('noticia.index');
+
+        $noticias = Noticia::all(); 
+        return view('noticia.index', compact('noticias'));
+        
     }
 
     /**
@@ -67,10 +70,11 @@ class NoticiaController extends Controller
      * @param  \App\Models\noticia  $noticia
      * @return \Illuminate\Http\Response
      */
-    public function edit(noticia $noticia)
+    public function edit($id)
     {
         //
-        return view('noticia.edit');
+        $noticia = Noticia::findOrFail($id);
+        return view('noticia.edit', compact('noticia'));
     }
 
     /**
@@ -80,9 +84,19 @@ class NoticiaController extends Controller
      * @param  \App\Models\noticia  $noticia
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, noticia $noticia)
+    public function update(Request $request, $id)
     {
         //
+        $noticia = Request()->except(['_token','_method']);
+        if($request->hasFile('Foto')){
+            $nuevaNoticia = Noticia::findOrFail($id);
+            Storage::delete('public/'. $nuevaNoticia->Foto);
+            $noticia['Foto'] = $request->file('Foto')->store('uploads','public');
+        }
+        Noticia::where('id', '=', $id)->update($noticia);
+        $nuevaNoticia = Noticia::findOrFail($id);
+        return view('noticia.edit', compact('nuevaNoticia'));
+
     }
 
     /**
@@ -91,8 +105,10 @@ class NoticiaController extends Controller
      * @param  \App\Models\noticia  $noticia
      * @return \Illuminate\Http\Response
      */
-    public function destroy(noticia $noticia)
+    public function destroy($id)
     {
         //
+        Noticia::destroy($id);
+        return redirect ('noticia');
     }
 }
