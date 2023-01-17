@@ -3,9 +3,9 @@
 
    
    <h3> Edicion de Noticia </h3>
-   <form class="form-Noticias" method="POST" action="{{url('/noticia')}}" enctype="multipart/form-data">
-     {{ method_field('PATH')}}
-     @include ('noticia/form');
+   <form class="form-Noticias" method="POST" action="{{url('/noticia/'. $noticia->id)}}" enctype="multipart/form-data">
+     {{ method_field('PATCH')}}
+     @include ('noticia.form',['accion'=>'Editar']);
    
    </form>
    

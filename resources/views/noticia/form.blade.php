@@ -6,7 +6,10 @@
 
 <div class="input-group mb-3">
     <span class="input-group-text" id="basic-addon1" for="Foto">Foto: </span>
-    <input type="file" class="form-control" name="Foto" id="Foto" value={{isset($noticia->Foto) ? $noticia->Foto : ''}}>
+    @if (isset($noticia->Foto))
+      <img src= "{{asset('storage').'/'. $noticia->Foto }}" alt="" width="80px">
+    @endif
+    <input type="file" class="form-control" name="Foto" id="Foto" >
 </div>
 
 <div class="input-group mb-3">

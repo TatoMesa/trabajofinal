@@ -20,20 +20,22 @@
   <tbody>
     @foreach ($noticias as $noticia)
       <tr>
-        <td>{{ $noticia->id }}</td>
-        <td>{{ $noticia->Titulo }}</td>
-        <td><img src= "{{asset('storage').'/'. $noticia->Foto }}" alt="" width="150px"></td>
-        <td>{{ $noticia->subTitulo }}</td>
-        <td>{{ $noticia->Contenido }}</td>
-        <td>{{ $noticia->Categorias }}</td>
-        <td Class="twoButons"> 
-          <a class="btn-sm " href="{{url('/noticia/' . $noticia->id . '/edit')}}"> Editar </a>
-          <form class="btn-sm " action="{{url('/noticia/' . $noticia->id)}}" method="POST">
+        <th>{{ $noticia->id }}</th>
+        <th>{{ $noticia->Titulo }}</th>
+        <th><img src= "{{asset('storage').'/'. $noticia->Foto }}" alt="" width="150px"></th>
+        <th>{{ $noticia->Categorias }}</th>
+        <th>{{ $noticia->subTitulo }}</th>
+        <th>{{ $noticia->Contenido }}</th>
+        <th> 
+          <a class="btn-sm finalizar" href="{{url('/noticia/' . $noticia->id. '/edit')}}">
+          Editar</a>
+          
+          <form class="btn-sm finalizar" action="{{url('/noticia/' . $noticia->id)}}" method="POST">
             @csrf
             {{method_field('DELETE')}}
             <input type="submit" value="Borrar" onclick="return confirm('Quiere borrar la Noticia?')">
           </form> 
-        </td>
+        </th>
       </tr>
     @endforeach
   </tbody>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\noticia;
 use Illuminate\Http\Request;
 use PhpParser\Node\Expr\PreDec;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
 
 class NoticiaController extends Controller
@@ -89,15 +90,15 @@ class NoticiaController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $noticia = Request()->except(['_token','_method']);
+        $nuevaNoticia = Request()->except(['_token','_method']);
         if($request->hasFile('Foto')){
-            $nuevaNoticia = Noticia::findOrFail($id);
-            Storage::delete('public/'. $nuevaNoticia->Foto);
-            $noticia['Foto'] = $request->file('Foto')->store('uploads','public');
+            $noticia = Noticia::findOrFail($id);
+            Storage::delete('public/'. $noticia->Foto);
+            $nuevaNoticia['Foto'] = $request->file('Foto')->store('uploads','public');
         }
-        Noticia::where('id', '=', $id)->update($noticia);
-        $nuevaNoticia = Noticia::findOrFail($id);
-        return view('noticia.edit', compact('nuevaNoticia'));
+        Noticia::where('id', '=', $id)->update($nuevaNoticia);
+        $noticia = Noticia::findOrFail($id);
+        return redirect ('noticia');
 
     }
 
@@ -110,7 +111,9 @@ class NoticiaController extends Controller
     public function destroy($id)
     {
         //
+        $noticia = Noticia::findOrFail($id);
+        Storage::delete('public/'. $noticia->Foto);
         Noticia::destroy($id);
-        return redirect ('noticia');
+        return redirect ('noticia')->with('mensaje','Noticia borrada satisfactoriamente.');;
     }
 }
