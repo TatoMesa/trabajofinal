@@ -5,11 +5,11 @@
       <section class= "noticias">
         @foreach ($noticias as $noticia)
           <div class="noticia" >
-            <h4> {{$noticia->Titulo}} </h4>
+            <h2> {{$noticia->Titulo}} </h2>
             <div class="imagen" style="aspect-ratio: 16 / 9; background-size: contain;">
                 <img src= "{{asset('storage').'/'. $noticia->Foto }}" alt="" >
             </div>
-            <h5> {{$noticia->subTitulo}} </h5>
+            <h3> {{$noticia->subTitulo}} </h3>
             <div class= "bajada">
               {{$noticia->Contenido}}
             </div>

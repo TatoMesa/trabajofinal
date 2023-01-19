@@ -98,7 +98,7 @@ class NoticiaController extends Controller
         }
         Noticia::where('id', '=', $id)->update($nuevaNoticia);
         $noticia = Noticia::findOrFail($id);
-        return redirect ('noticia');
+        return redirect ('noticia')->with('mensaje','Noticia Editada Satisfactoriamente.');
 
     }
 
@@ -114,6 +114,6 @@ class NoticiaController extends Controller
         $noticia = Noticia::findOrFail($id);
         Storage::delete('public/'. $noticia->Foto);
         Noticia::destroy($id);
-        return redirect ('noticia')->with('mensaje','Noticia borrada satisfactoriamente.');;
+        return redirect ('noticia')->with('mensaje','Noticia Borrada Satisfactoriamente.');
     }
 }

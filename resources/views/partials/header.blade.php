@@ -12,9 +12,7 @@
       </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-link" href="#">Categorias</a>
       <a class="nav-link" href="{{url('home')}}">Iniciar Sesión</a>
-      <a class="nav-link" href="#">Nosotros</a>
       <a class="nav-link " href="{{url('/noticia')}}" tabindex="-1" aria-disabled="true">Manejo de Noticia</a>
     </div>
   </nav>

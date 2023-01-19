@@ -5,9 +5,13 @@
 @include ("./partials/head")
 @include ("./partials/header")
 
+<h4> Listado de Noticias </h4>
+@if (Session::has('mensaje'))
+      <h5 class="input-group mb-3">{{ Session::get('mensaje') }}</h5>
+@endif
 
 <section class="myTable">
-  <a href="{{url('/noticia/create')}}" class="btn btn-lg finalizar" > Crear Noticia </a>
+  <a href="{{url('/noticia/create')}}" class="btn finalizar" > Crear Noticia </a>
   <br>
   <table class="table ">
   <thead>

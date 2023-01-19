@@ -1,15 +1,12 @@
 
- @include ("./partials/head")
- @include ("./partials/header")
+@include ("./partials/head")
+@include ("./partials/header")
 
-    
-    <h3>Creacion de Noticias </h3>
+<h4 class="input-group mb-3"> Ingrese los campos de la noticia a publicar </h4>
+    @if (Session::has('mensaje'))
+      <h5>{{ Session::get('mensaje') }}</h5>
+    @endif
     <form class="form-Noticias" method="POST" action="{{url('/noticia')}}" enctype="multipart/form-data">
-      
-      @include ('noticia.form',['action' => 'Crear']);
-    
+      @include ('noticia.form',['accion' => 'Crear'])
     </form>
-    
-    
-
 @include ("./partials/footer")

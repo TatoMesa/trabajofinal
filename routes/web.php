@@ -28,3 +28,9 @@ Route::resource('noticia',NoticiaController::class);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::group(['middleware' => 'auth'],function () {
+
+    Route::get('noticia/', [NoticiaController::class, 'index'])->name('home');
+
+});
