@@ -16,7 +16,7 @@ use App\Models\noticia;
 */
 
 Route::get('/', function () {
-    $noticias = Noticia::all();
+    $noticias = Noticia::orderBy('Categorias','asc')->get();
     return view('welcome', compact('noticias' ));
 
 

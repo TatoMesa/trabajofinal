@@ -18,12 +18,12 @@
     <label class="input-group-text" for="Categorias">Categorias: </label>
     <select class="form-select" name="Categorias" id="Categorias" >
       <option selected> {{isset($noticia->Categorias) ? $noticia->Categorias : ''}} </option>
-      <option value="Deportes" > Deportes </option>
-      <option value="Politica" > Politica </option>
       <option value="Actualidad" > Actualidad </option>
-      <option value="Naturaleza" > Naturaleza </option>
       <option value="Economia" > Economia </option>
       <option value="Espectaculos" > Espectaculos </option>
+      <option value="Deportes" > Deportes </option>
+      <option value="Naturaleza" > Naturaleza </option>
+      <option value="Politica" > Politica </option>
     </select>
 </div>
 

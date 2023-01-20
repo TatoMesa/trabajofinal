@@ -10,7 +10,7 @@
       <h5 class="input-group mb-3">{{ Session::get('mensaje') }}</h5>
 @endif
 
-<section class="myTable">
+<section class="myTable table">
   <a href="{{url('/noticia/create')}}" class="btn finalizar" > Crear Noticia </a>
   <br>
   <table class="table ">

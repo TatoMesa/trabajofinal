@@ -4,7 +4,42 @@
   <body>
       <section class= "noticias">
         @foreach ($noticias as $noticia)
-          <div class="noticia" >
+          
+        @switch($noticia->Categorias)
+          @case("Actualidad")
+            @php $colorFondo = "#F8F8FF"; @endphp
+            @break
+     
+          @case("Economia")
+            @php $colorFondo = "#F0FFFF"; @endphp
+            @break
+
+          @case("Espectaculos")
+            @php $colorFondo = "#F8F8FF"; @endphp
+            @break
+
+          @case("Deportes")
+            @php $colorFondo = "#F5F5DC"; @endphp
+            @break
+
+          @case("Naturaleza")
+            @php $colorFondo = "#F0FFF0"; @endphp
+            @break
+
+          @case("Politica")
+            @php $colorFondo = "#FFF5EE"; @endphp
+            @break
+     
+          @default
+            @php $colorFondo = "#48D1CC"; @endphp
+        @endswitch
+         
+         
+          
+
+
+
+          <div class="noticia" style= "background-color: {{$colorFondo}}">
             <h2> {{$noticia->Titulo}} </h2>
             <div class="imagen" style="aspect-ratio: 16 / 9; background-size: contain;">
                 <img src= "{{asset('storage').'/'. $noticia->Foto }}" alt="" >

@@ -19,7 +19,8 @@ class NoticiaController extends Controller
     {
         //
 
-        $noticias = Noticia::all(); 
+        //$noticias = Noticia::all(); 
+        $noticias = Noticia::orderBy('Categorias','asc')->get();
         return view('noticia.index', compact('noticias'));
         
     }
