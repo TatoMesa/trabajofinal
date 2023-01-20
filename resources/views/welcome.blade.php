@@ -23,7 +23,7 @@
             @break
 
           @case("Naturaleza")
-            @php $colorFondo = "#F0FFF0"; @endphp
+            @php $colorFondo = "#66CDAA"; @endphp
             @break
 
           @case("Politica")

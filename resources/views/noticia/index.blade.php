@@ -34,7 +34,7 @@
         <th>{{ $noticia->Categorias }}</th>
         <th>{{ $noticia->subTitulo }}</th>
         <th>{{ $noticia->Contenido }}</th>
-        <th> 
+        <th class="twoButons"> 
           <a class="btn-sm finalizar" href="{{url('/noticia/' . $noticia->id. '/edit')}}">
           Editar</a>
           

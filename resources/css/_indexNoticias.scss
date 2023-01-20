@@ -13,6 +13,17 @@
 
  .twoButons{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-evenly;
+    justify-items: stretch;
+    box-shadow: none;
+    border-bottom: 0;
+    text-align: center;
+    
        
-    }
+}
+
+tr{
+    align-content: center;
+    align-items: center;
+    
+}

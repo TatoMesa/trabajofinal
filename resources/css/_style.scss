@@ -3,7 +3,7 @@ h1{
     background-color: $primario;
     color: $destacado;
     padding: 10px;
-    margin: 20px 30px 20px 10px;
+    margin: 10px 30px 10px 10px;
 }
 
 .preheader{
@@ -14,9 +14,6 @@ h1{
 
 .mynavbar{
     background-color: $destacado;
-    height: 80px;
-    
-   
 }
 
 .nav-link {
@@ -28,5 +25,12 @@ h1{
     flex-direction: row-reverse;
     align-items: center;
  
+    
+}
+
+body{
+    margin:0;
+    padding:0;
+    background-color: $fondoBody;
     
 }
