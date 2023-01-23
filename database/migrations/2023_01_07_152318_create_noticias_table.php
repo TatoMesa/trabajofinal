@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('Categorias');
             $table->string('subTitulo');
             $table->longText('Contenido');
+            $table->string('Autor');
             
             $table->timestamps();
         });
