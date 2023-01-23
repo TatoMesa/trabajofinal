@@ -36,6 +36,14 @@
   <span class="input-group-text" for="Contenido">Contenido: </span>
   <input type="text" class="form-control" name="Contenido" id="Contenido" value="{{isset($noticia->Contenido) ? $noticia->Contenido : ''}}">
 </div>
+
+
+<div class="input-group mb-3">
+  <span class="input-group-text" for="Autor">Autor: </span>
+  <input type="text" class="form-control" name="Autor" id="Autor" value="{{ isset($noticia->Autor) ? $noticia->Autor : Auth::user()->name  }}">
+</div>
+
+
 <div class="input-group mb-3 butongroup">
   <input class="btn btn-lg finalizar" type="submit" value="{{$accion}} Noticia">
   <a href="{{url('noticia')}}" class="btn btn-lg finalizar" > Finalizar </a>

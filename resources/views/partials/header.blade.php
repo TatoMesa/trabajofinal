@@ -12,8 +12,15 @@
       </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-link" href="{{url('home')}}">Iniciar Sesión</a>
-      <a class="nav-link " href="{{url('/noticia')}}" tabindex="-1" aria-disabled="true">Manejo de Noticia</a>
+      
+      <a class="nav-link" href="{{url('home')}}"> {{isset(Auth::user()->name) ? Auth::user()->name : "Iniciar sesión" }}</a>
+      <a class="nav-link " href="{{url('/noticia')}}" tabindex="-1" aria-disabled="true"> Manejo de Noticia </a>
+      
+      
+      
     </div>
+
   </nav>
+ 
+
 </header>

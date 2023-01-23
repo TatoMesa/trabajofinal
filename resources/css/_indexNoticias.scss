@@ -1,5 +1,6 @@
 .myTable{
     padding: (10px 30px 30px);
+    width: 100%;
 }
 
 
@@ -22,8 +23,9 @@
        
 }
 
-tr{
-    align-content: center;
-    align-items: center;
-    
+.contenido{
+    height:100px;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

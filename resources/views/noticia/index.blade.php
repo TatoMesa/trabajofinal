@@ -13,38 +13,47 @@
 <section class="myTable table">
   <a href="{{url('/noticia/create')}}" class="btn finalizar" > Crear Noticia </a>
   <br>
-  <table class="table ">
+  <table class="table">
   <thead>
     <tr>
       <th scope="col">#</th>
       <th scope="col">Titulo</th>
       <th scope="col">Foto</th>
+      <th scope="col">Categoria</th>
       <th scope="col">Subtitulo</th>
       <th scope="col">Contenido</th>
-      <th scope="col">Categoria</th>
       <th scope="col">Acción</th>
     </tr>
   </thead>
   <tbody>
+
+
+
     @foreach ($noticias as $noticia)
-      <tr>
-        <th>{{ $noticia->id }}</th>
-        <th>{{ $noticia->Titulo }}</th>
-        <th><img src= "{{asset('storage').'/'. $noticia->Foto }}" alt="" width="150px"></th>
-        <th>{{ $noticia->Categorias }}</th>
-        <th>{{ $noticia->subTitulo }}</th>
-        <th>{{ $noticia->Contenido }}</th>
-        <th class="twoButons"> 
-          <a class="btn-sm finalizar" href="{{url('/noticia/' . $noticia->id. '/edit')}}">
-          Editar</a>
+
+      
+      
+      @if ((Auth::user()->name == $noticia->Autor) or (Auth::user()->name == "admin"))
+        <tr>
+          <td>{{ $noticia->id }}</td>
+          <td><div class="contenido">{{ $noticia->Titulo }}</div></td>
+          <td><img src= "{{asset('storage').'/'. $noticia->Foto }}" alt="" width="150px"></td>
+          <td>{{ $noticia->Categorias }}</td>
+          <td><div class="contenido">{{ $noticia->subTitulo }}</div></td>
+          <td><div class="contenido">{{ $noticia->Contenido }}</div></td>
+          <td class="twoButons"> 
+            <a class="btn-sm finalizar" href="{{url('/noticia/' . $noticia->id. '/edit')}}">
+            Editar</a>
           
-          <form class="btn-sm finalizar" action="{{url('/noticia/' . $noticia->id)}}" method="POST">
-            @csrf
-            {{method_field('DELETE')}}
-            <input type="submit" value="Borrar" onclick="return confirm('Quiere borrar la Noticia?')">
-          </form> 
-        </th>
-      </tr>
+            <form class="btn-sm finalizar" action="{{url('/noticia/' . $noticia->id)}}" method="POST">
+              @csrf
+              {{method_field('DELETE')}}
+              <input type="submit" value="Borrar" onclick="return confirm('Quiere borrar la Noticia?')">
+            </form></td>
+        </tr>
+      @endif
+    
+    
     @endforeach
   </tbody>
 </table>

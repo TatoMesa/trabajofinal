@@ -1,14 +1,15 @@
 
 h1{
     background-color: $primario;
-    color: $destacado;
+    color: $nombre;
     padding: 10px;
-    margin: 10px 30px 10px 10px;
+    margin: 5px 20px 5px 20px;
+    border-radius: 15px;
 }
 
 .preheader{
     background-color: $textoPlano;
-    color: $destacado;
+    color: $nombre;
 }
 
 

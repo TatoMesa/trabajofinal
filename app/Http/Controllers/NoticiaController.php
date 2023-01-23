@@ -18,8 +18,7 @@ class NoticiaController extends Controller
     public function index()
     {
         //
-
-        //$noticias = Noticia::all(); 
+        date_default_timezone_set("America/Argentina/Buenos_Aires"); 
         $noticias = Noticia::orderBy('Categorias','asc')->get();
         return view('noticia.index', compact('noticias'));
         
@@ -47,13 +46,14 @@ class NoticiaController extends Controller
     public function store(Request $request)
     {
         //
+        date_default_timezone_set("America/Argentina/Buenos_Aires"); 
         $noticia = request()->except('_token');
+        $noticia['created_at']=now();      
         if ($request->hasFile('Foto')){
             $noticia['Foto']=$request->file('Foto')->store('uploads','public');
         }
         noticia::insert($noticia);
         return redirect('noticia/create')->with('mensaje','Noticia creada satisfactoriamente.');
-        
     }
 
     /**
@@ -62,10 +62,12 @@ class NoticiaController extends Controller
      * @param  \App\Models\noticia  $noticia
      * @return \Illuminate\Http\Response
      */
-    public function show(noticia $noticia)
+    public function show($id)
     {
         // Visualizar cada noticia por separado
-        
+        $noticia = Noticia::findOrFail($id);
+        return view('noticia.show', compact('noticia'));
+
     }
 
     /**
@@ -76,7 +78,7 @@ class NoticiaController extends Controller
      */
     public function edit($id)
     {
-        //
+        //Funcion para editar cada noticia
         $noticia = Noticia::findOrFail($id);
         return view('noticia.edit', compact('noticia'));
     }
@@ -91,7 +93,9 @@ class NoticiaController extends Controller
     public function update(Request $request, $id)
     {
         //
+        date_default_timezone_set("America/Argentina/Buenos_Aires"); 
         $nuevaNoticia = Request()->except(['_token','_method']);
+        $nuevaNoticia['created_at']=now();
         if($request->hasFile('Foto')){
             $noticia = Noticia::findOrFail($id);
             Storage::delete('public/'. $noticia->Foto);
