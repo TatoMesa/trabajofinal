@@ -1,4 +1,27 @@
 
+#app{
+    background-color: rgb(255, 240, 26);
+    align-self: center;
+    padding: 5px;
+    #fecha{
+        background-color: aqua;
+    }
+    #dolar{
+        background-color: bisque;
+    }
+    #euro{
+        background-color: brown;
+    }
+    #btc{
+        background-color: chartreuse;
+    }
+    #etc{
+        background-color: deeppink;
+    }
+}
+
+
+
 .noticias{
     display: grid;
     justify-content: space-between;
