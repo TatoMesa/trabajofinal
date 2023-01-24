@@ -3,7 +3,7 @@
 @include ("./partials/header")
   <body>
 
-    <section id="app"> Cotizaciones de monedas </section>
+    <section id="app"> </section>
 
 
     

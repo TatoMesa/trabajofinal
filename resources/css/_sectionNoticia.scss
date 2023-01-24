@@ -1,8 +1,13 @@
 
 #app{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     background-color: rgb(255, 240, 26);
     align-self: center;
     padding: 5px;
+    .cotizaciones{
+        padding:5px;
+    }
     #fecha{
         background-color: aqua;
     }

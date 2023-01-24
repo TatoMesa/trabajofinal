@@ -23,26 +23,31 @@ const mostrarDivisas = (data) => {
     
     let elemento = document.createElement('span')
     elemento.setAttribute("id", "fecha")
+    elemento.setAttribute("class", "cotizaciones")
     elemento.appendChild(document.createTextNode(" Hoy: " + hoy))
     etiquetaHtml.appendChild(elemento)
     
     elemento = document.createElement('span')
     elemento.setAttribute("id", "dolar")
+    elemento.setAttribute("class", "cotizaciones")
     elemento.appendChild(document.createTextNode(" Dolar: $"+ dolar))
     etiquetaHtml.appendChild(elemento)
 
     elemento = document.createElement('span')
     elemento.setAttribute("id", "euro")
+    elemento.setAttribute("class", "cotizaciones")
     elemento.appendChild(document.createTextNode(" Euro: $"+ euro))
     etiquetaHtml.appendChild(elemento)
 
     elemento = document.createElement('span')
     elemento.setAttribute("id", "btc")
+    elemento.setAttribute("class", "cotizaciones")
     elemento.appendChild(document.createTextNode(" Bitcoin: $"+ bitcoin))
     etiquetaHtml.appendChild(elemento)
     
     elemento = document.createElement('span')
     elemento.setAttribute("id", "etc")
+    elemento.setAttribute("class", "cotizaciones")
     elemento.appendChild(document.createTextNode(" Ethereaum: $"+ ethereum))
     etiquetaHtml.appendChild(elemento)
             
