@@ -2,12 +2,9 @@
 @include ("./partials/head")
 @include ("./partials/header")
   <body>
-
-    <section id="app"> </section>
-
-
+    <section id="cotizaciones"> </section>
     
-      <section class= "noticias">
+    <section class= "noticias">
         @foreach ($noticias as $noticia)
           @switch($noticia->Categorias)
             @case("Actualidad")
@@ -43,7 +40,9 @@
           </div></a>
         @endforeach  
       </section>
+         
   </body>
-  <script src="{{asset('app.js')}}" type="module"></script>
+  
   @include ("./partials/footer")
+  <script src="{{asset('app.js')}}" type="module"></script>
 </html>

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use PhpParser\Node\Expr\PreDec;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
+use Psy\CodeCleaner\AssignThisVariablePass;
 
 class NoticiaController extends Controller
 {
@@ -45,6 +46,21 @@ class NoticiaController extends Controller
      */
     public function store(Request $request)
     {
+
+        $reglas = [
+            'Titulo'=>'required|string|max:100',
+            'Foto'=> 'required|max:60000|mimes:jpeg,png.jpg',
+            'subTitulo'=> 'required|string|max:100',
+            'Contenido'=> 'required|string|max:10000',
+            'Autor'=> 'required|string|max:100',
+        ];
+        
+        $mensaje=[
+            'required'=>'El: atributo es requerido',
+            'Foto.required'=>'La: foto es requerida',
+        ];
+
+        $this->validate($request, $reglas, $mensaje);
         //
         date_default_timezone_set("America/Argentina/Buenos_Aires"); 
         $noticia = request()->except('_token');
@@ -93,6 +109,17 @@ class NoticiaController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $reglas = [
+            'Titulo'=>'required|string|max:100',
+            'subTitulo'=> 'required|string|max:100',
+            'Contenido'=> 'required|string|max:10000',
+            'Autor'=> 'required|string|max:100',
+        ];
+
+        if ($request->hasfile('Foto')){
+            $reglas['Foto'] = ['required|max:60000|mines:jpeg,png,jpg'];
+        }
+        $this->validate($request, $reglas);
         date_default_timezone_set("America/Argentina/Buenos_Aires"); 
         $nuevaNoticia = Request()->except(['_token','_method']);
         $nuevaNoticia['created_at']=now();

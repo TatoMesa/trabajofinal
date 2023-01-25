@@ -1,27 +1,37 @@
 
-#app{
+#cotizaciones{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    background-color: rgb(255, 240, 26);
+    background-color: $fondoCotizaciones;
     align-self: center;
     padding: 5px;
     .cotizaciones{
         padding:5px;
+        font-size: small;
     }
+    @include mobile() {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    @include tablet() {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @include dekstop() {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
     #fecha{
-        background-color: aqua;
+        background-color: $destacado;
     }
     #dolar{
-        background-color: bisque;
+        background-color: $dolar;
     }
     #euro{
-        background-color: brown;
+        background-color: $euro;
     }
     #btc{
-        background-color: chartreuse;
+        background-color: $btc;
     }
     #etc{
-        background-color: deeppink;
+        background-color: $etc;
     }
 }
 

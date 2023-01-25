@@ -11,7 +11,7 @@ const apiUrl = 'https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/'+ dia + 
 
 fetch(apiUrl).then(respuesta => respuesta.json()).then(data => mostrarDivisas(data)).catch(error => console.log(error));
 
-const etiquetaHtml = document.querySelector('#app')
+const etiquetaHtml = document.querySelector('#cotizaciones')
 
 const mostrarDivisas = (data) => { 
     let hoy = data.date //fecha actual
@@ -20,35 +20,34 @@ const mostrarDivisas = (data) => {
     let bitcoin = (euro / data.eur.btc).toFixed(3);  //cuantos pesos 1 bitcoin
     let ethereum = (euro / data.eur.etc).toFixed(3); //cuantos pesos 1 ethereum
     
-    
-    let elemento = document.createElement('span')
+    var elemento = document.createElement('span')
     elemento.setAttribute("id", "fecha")
     elemento.setAttribute("class", "cotizaciones")
-    elemento.appendChild(document.createTextNode(" Hoy: " + hoy))
+    elemento.appendChild(document.createTextNode(hoy + "  Cotizaciones: "))
     etiquetaHtml.appendChild(elemento)
     
     elemento = document.createElement('span')
     elemento.setAttribute("id", "dolar")
     elemento.setAttribute("class", "cotizaciones")
-    elemento.appendChild(document.createTextNode(" Dolar: $"+ dolar))
+    elemento.appendChild(document.createTextNode(" Dolar: $" + dolar))
     etiquetaHtml.appendChild(elemento)
 
     elemento = document.createElement('span')
     elemento.setAttribute("id", "euro")
     elemento.setAttribute("class", "cotizaciones")
-    elemento.appendChild(document.createTextNode(" Euro: $"+ euro))
+    elemento.appendChild(document.createTextNode(" Euro: $" + euro))
     etiquetaHtml.appendChild(elemento)
 
     elemento = document.createElement('span')
     elemento.setAttribute("id", "btc")
     elemento.setAttribute("class", "cotizaciones")
-    elemento.appendChild(document.createTextNode(" Bitcoin: $"+ bitcoin))
+    elemento.appendChild(document.createTextNode(" Bitcoin: $" + bitcoin))
     etiquetaHtml.appendChild(elemento)
     
     elemento = document.createElement('span')
     elemento.setAttribute("id", "etc")
     elemento.setAttribute("class", "cotizaciones")
-    elemento.appendChild(document.createTextNode(" Ethereaum: $"+ ethereum))
+    elemento.appendChild(document.createTextNode(" Ethereum: $" + ethereum))
     etiquetaHtml.appendChild(elemento)
             
 }

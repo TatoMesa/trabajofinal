@@ -5,6 +5,16 @@ h1{
     padding: 10px;
     margin: 5px 20px 5px 20px;
     border-radius: 15px;
+    
+    @include mobile() {
+        font-size: small;
+    }
+    @include tablet() {
+        font-size: 30px;
+    }
+    @include dekstop() {
+        font-size: 40px;
+    }
 }
 
 .preheader{
