@@ -5,6 +5,11 @@
     </div>
     <nav class="navbar navbar-expand-sm mynavbar  ">
         <div class="container-fluid ">
+            
+            
+            
+            
+            
             <a class="navbar-brand" href="{{ url('') }}">
                 <h1>Noticias Comunitarias</h1>
             </a>

@@ -9,7 +9,7 @@ const dia = fecha.getFullYear() + '-' + fecha.getMonth()+1 + '-' +fecha.getDate(
                                                                                     //usar la url que maneja la api
 const apiUrl = 'https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/'+ dia + '/currencies/eur.json'
 
-fetch(apiUrl).then(respuesta => respuesta.json()).then(data => mostrarDivisas(data)).catch(error => console.log(error));
+fetch(apiUrl).then(respuesta => respuesta.json()).then(data => mostrarDivisas(data)).catch(error => console.log(error))
 
 const etiquetaHtml = document.querySelector('#cotizaciones')
 
@@ -20,7 +20,7 @@ const mostrarDivisas = (data) => {
     let bitcoin = (euro / data.eur.btc).toFixed(3);  //cuantos pesos 1 bitcoin
     let ethereum = (euro / data.eur.etc).toFixed(3); //cuantos pesos 1 ethereum
     
-    var elemento = document.createElement('span')
+    let elemento = document.createElement('span')
     elemento.setAttribute("id", "fecha")
     elemento.setAttribute("class", "cotizaciones")
     elemento.appendChild(document.createTextNode(hoy + "  Cotizaciones: "))
@@ -49,5 +49,5 @@ const mostrarDivisas = (data) => {
     elemento.setAttribute("class", "cotizaciones")
     elemento.appendChild(document.createTextNode(" Ethereum: $" + ethereum))
     etiquetaHtml.appendChild(elemento)
-            
-}
+}         
+

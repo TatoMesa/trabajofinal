@@ -13,7 +13,7 @@
 <section class="myTable table table-responsive">
   <a href="{{url('/noticia/create')}}" class="btn finalizar" > Crear Noticia </a>
   <br>
-  <table class="table">
+  <table class="table table-sm">
   <thead>
     <tr>
       <th scope="col">#</th>

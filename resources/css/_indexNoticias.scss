@@ -1,12 +1,7 @@
 .myTable{
     padding: (10px 30px 30px);
     width: 100%;
-    
- 
-
 }
-
-
 
 .btn-sm{
     background-color: $primario;
@@ -15,15 +10,13 @@
     padding: 5px;  
 }
 
- .twoButons{
+.twoButons{
     display: grid;
     justify-content: space-evenly;
     justify-items: stretch;
     box-shadow: none;
     border-bottom: 0;
     text-align: center;
-    
-       
 }
 
 .contenido{
