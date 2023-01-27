@@ -4,7 +4,7 @@
         <nav class="navbar navbar-expand-sm mynavbar  ">
             <div class="container-fluid ">
                 <a class="navbar-brand" href="{{ url('') }}">
-                    <h1><img src="{{asset('storage/images/logori.png')}}" alt="logo" class="logo"> Community Post </h1>
+                    <h1><img src="{{asset('storage/images/Logo.png')}}" alt="logo" class="logo"></h1>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
