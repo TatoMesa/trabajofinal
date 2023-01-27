@@ -39,7 +39,7 @@
           <td><div class="contenido">{{ $noticia->Titulo }}</div></td>
           <td><img src= "{{asset('storage').'/'. $noticia->Foto }}" alt="" width="150px"></td>
           <td>{{ $noticia->Categorias }}</td>
-          <td><div class="contenido">{{ $noticia->subTitulo }}</div></td>
+          <td><div class="contenido">{{ $noticia->Subtitulo }}</div></td>
           <td><div class="contenido">{{ $noticia->Contenido }}</div></td>
           <td class="twoButons"> 
             <a class="btn-sm finalizar" href="{{url('/noticia/' . $noticia->id. '/edit')}}">

@@ -5,13 +5,9 @@
     </div>
     <nav class="navbar navbar-expand-sm mynavbar  ">
         <div class="container-fluid ">
-            
-            
-            
-            
-            
             <a class="navbar-brand" href="{{ url('') }}">
-                <h1>Noticias Comunitarias</h1>
+                <h1> <img src="{{asset('storage/images/logori.png')}}" alt="logo" class="logo"> Community Post
+                </h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup " aria-expanded="false" aria-label="Toggle navigation">

@@ -18,10 +18,10 @@ return new class extends Migration
             $table->string('Titulo');
             $table->string('Foto');
             $table->string('Categorias');
-            $table->string('subTitulo');
+            $table->string('Subtitulo');
             $table->longText('Contenido');
             $table->string('Autor');
-            
+            $table->integer('Visitas');
             $table->timestamps();
         });
     }

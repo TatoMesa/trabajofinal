@@ -37,8 +37,8 @@
 </div>
 
 <div class="input-group mb-3">
-  <span class="input-group-text" id="basic-addon1" for="subTitulo">Subtitulo: </span>
-  <input type="text" class="form-control" name="subTitulo" id="subTitulo" value="{{isset($noticia->subTitulo) ? $noticia->subTitulo : ''}}">
+  <span class="input-group-text" id="basic-addon1" for="Subtitulo">Subtitulo: </span>
+  <input type="text" class="form-control" name="Subtitulo" id="Subtitulo" value="{{isset($noticia->Subtitulo) ? $noticia->Subtitulo : ''}}">
 </div>
 
 <div class="input-group mb-3">

@@ -1,13 +1,17 @@
+body{
+    margin:0;
+    padding:0;
+    background-color: $fondoBody;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
 
 h1{
-    background-color: $primario;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: $nombre;
-    padding: 10px;
-    margin: 5px 20px 5px 20px;
-    border-radius: 15px;
-    
+    padding-left: 4%;
     @include mobile() {
-        font-size: small;
+        font-size: 30px;
     }
     @include tablet() {
         font-size: 30px;
@@ -19,7 +23,8 @@ h1{
 
 .preheader{
     background-color: $textoPlano;
-    color: $nombre;
+    color: $destacado;
+ 
 }
 
 
@@ -39,9 +44,10 @@ h1{
     
 }
 
-body{
-    margin:0;
-    padding:0;
-    background-color: $fondoBody;
-    
+
+.logo{
+    width: 80px;
+    height: 80px;
+    border: 0px;
+    border-radius: 150px;
 }

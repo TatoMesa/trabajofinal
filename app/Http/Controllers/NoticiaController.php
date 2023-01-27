@@ -50,7 +50,7 @@ class NoticiaController extends Controller
         $reglas = [
             'Titulo'=>'required|string|max:100',
             'Foto'=> 'required|max:60000|mimes:jpeg,png.jpg',
-            'subTitulo'=> 'required|string|max:100',
+            'Subtitulo'=> 'required|string|max:100',
             'Contenido'=> 'required|string|max:10000',
             'Autor'=> 'required|string|max:100',
         ];
@@ -82,6 +82,9 @@ class NoticiaController extends Controller
     {
         // Visualizar cada noticia por separado
         $noticia = Noticia::findOrFail($id);
+        $noticia->Visitas +=1;
+        $noticia->save();
+        $noticia = Noticia::findOrFail($id);
         return view('noticia.show', compact('noticia'));
 
     }
@@ -111,7 +114,7 @@ class NoticiaController extends Controller
         //
         $reglas = [
             'Titulo'=>'required|string|max:100',
-            'subTitulo'=> 'required|string|max:100',
+            'Subtitulo'=> 'required|string|max:100',
             'Contenido'=> 'required|string|max:10000',
             'Autor'=> 'required|string|max:100',
         ];
