@@ -6,7 +6,7 @@
     padding: 5px;
     .cotizaciones{
         padding:5px;
-        font-size: small;
+        font-size:medium;
     }
     @include mobile() {
         grid-template-columns: repeat(1, 1fr);
@@ -58,10 +58,11 @@
         border-radius: 15px;
         height: 100%;
         h2{
+            margin-top: 2%;
             padding-left: 2%;
-            font-size: larger;
+            font-size: large;
             font-weight: bold;
-        }
+         }
         .imagen{
             align-content: center;
             img{
@@ -70,14 +71,9 @@
                 border-radius: 15px;
             }
         }
-        h3{
-            padding-top: 2%;
-            font-size:large;
-            font-weight: bold;
-        }
         .bajada{
             overflow: hidden;
-            height: 55px;
+            height: 70px;
             line-height: 18px;
         }
     }

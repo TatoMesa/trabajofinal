@@ -29,11 +29,10 @@
         @endswitch
         <a href="{{url('noticia/'. $noticia->id. 'show/')}}" target="_blank"> 
           <div class="noticia" style= "background-color: {{$colorFondo}}">
-            <h2> {{$noticia->Titulo}} </h2>
             <div class="imagen" style="aspect-ratio: 16 / 9; background-size: contain;">
               <img src= "{{asset('storage').'/'. $noticia->Foto }}" alt="" >
             </div>
-            <h3> {{$noticia->Subtitulo}} </h3>
+            <h2> {{$noticia->Titulo}} </h2>
             <div class= "bajada">
               {{$noticia->Contenido}}
             </div>

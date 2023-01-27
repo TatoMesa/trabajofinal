@@ -6,7 +6,7 @@
     <nav class="navbar navbar-expand-sm mynavbar  ">
         <div class="container-fluid ">
             <a class="navbar-brand" href="{{ url('') }}">
-                <h1> <img src="{{asset('/storage/images/logo.jpeg')}}" alt="logo" class="logo"></h1>
+                <h1> <img src="{{asset('/storage/images/logo.jpeg')}}" alt="Logo de Community Post" class="logo"></h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup " aria-expanded="false" aria-label="Toggle navigation">
@@ -19,5 +19,7 @@
                     <a class="nav-link " href="{{ url('/noticia') }}" tabindex="-1" aria-disabled="true"> Manejo de
                         Noticia </a>
                 </div>
+            </div>
+        </div>
     </nav>
 </header>

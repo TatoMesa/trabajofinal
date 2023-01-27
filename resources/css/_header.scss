@@ -1,5 +1,4 @@
 
-
 h1{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: $nombre;
@@ -18,9 +17,7 @@ h1{
 .preheader{
     background-color: $textoPlano;
     color: $destacado;
- 
 }
-
 
 .mynavbar{
     background-color: $destacado;
@@ -34,10 +31,7 @@ h1{
 .navbar-expand-sm .navbar-collapse {
     flex-direction: row-reverse;
     align-items: center;
- 
-    
 }
-
 
 .logo{
     width: 300px;
