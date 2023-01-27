@@ -64,7 +64,8 @@ class NoticiaController extends Controller
         //
         date_default_timezone_set("America/Argentina/Buenos_Aires"); 
         $noticia = request()->except('_token');
-        $noticia['created_at']=now();      
+        $noticia['created_at']=now();
+        $noticia['Visitas']=0;      
         if ($request->hasFile('Foto')){
             $noticia['Foto']=$request->file('Foto')->store('uploads','public');
         }
