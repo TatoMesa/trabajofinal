@@ -73,8 +73,11 @@
         }
         .bajada{
             overflow: hidden;
-            height: 70px;
-            line-height: 18px;
+            text-overflow: ellipsis;
+            font-size: medium;
+            padding-left: 2%;
+            height: 75px;
+            line-height: 20px;
         }
     }
 }
