@@ -1,6 +1,31 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin:0;
     padding:0;
     background-color: $fondoBody;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    .ir-arriba{
+        position:fixed;
+        bottom: 30px;
+        right: 0px;
+        width: 40px;
+        height: 40px;
+        background-color: $primario;
+        border:none;
+        cursor: pointer;
+        transition: all;
+        span{
+            color: $fondoBody;
+            font-size: 20px;
+            font-weight: bold;
+            z-index: 10;
+        }
+    }
+    .ir-arriba:hover{
+        transform: scale(1.2);
+    };
+
 }

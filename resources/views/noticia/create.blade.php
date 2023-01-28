@@ -2,7 +2,7 @@
 @include ("./partials/head")
 @include ("./partials/header")
 
-<h4 class="input-group mb-3"> Ingrese las partes de la noticia a publicar </h4>
+<h4 class="input-group mb-3"> Ingrese las partes del Post a publicar </h4>
     @if (Session::has('mensaje'))
       <h5>{{ Session::get('mensaje') }}</h5>
     @endif

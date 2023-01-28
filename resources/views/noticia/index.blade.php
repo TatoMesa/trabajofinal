@@ -5,13 +5,13 @@
 @include ("./partials/head")
 @include ("./partials/header")
 
-<h4> Listado de Noticias </h4>
+<h4> Listado de Post </h4>
 @if (Session::has('mensaje'))
       <h5 class="input-group mb-3">{{ Session::get('mensaje') }}</h5>
 @endif
 
 <section class="myTable table table-responsive">
-  <a href="{{url('/noticia/create')}}" class="btn finalizar" > Crear Noticia </a>
+  <a href="{{url('/noticia/create')}}" class="btn finalizar" > Crear Post </a>
   <br>
   <table class="table table-sm">
   <thead>
@@ -48,7 +48,7 @@
             <form class="btn-sm finalizar" action="{{url('/noticia/' . $noticia->id)}}" method="POST">
               @csrf
               {{method_field('DELETE')}}
-              <input type="submit" value="Borrar" onclick="return confirm('Quiere borrar la Noticia?')">
+              <input type="submit" value="Borrar" onclick="return confirm('Quiere borrar el Post?')">
             </form></td>
         </tr>
       @endif

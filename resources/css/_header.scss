@@ -2,6 +2,16 @@
 h1{
     padding-left: 4%;
 }
+.logo{
+    width: 300px;
+    height: 100px;
+    border: 0px;
+    border-radius: 150px;
+    @include mobile() {
+        width: 95%;
+    }
+  
+}
 
 .preheader{
     background-color: $textoPlano;
@@ -10,6 +20,7 @@ h1{
 
 .mynavbar{
     background-color: $destacado;
+    padding-right: 8%;
 }
 
 .nav-link {
@@ -22,9 +33,3 @@ h1{
     align-items: center;
 }
 
-.logo{
-    width: 300px;
-    height: 100px;
-    border: 0px;
-    border-radius: 150px;
-}

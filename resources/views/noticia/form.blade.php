@@ -54,7 +54,7 @@
 
 
 <div class="input-group mb-3 butongroup">
-  <input class="btn btn-lg finalizar" type="submit" value="{{$accion}} Noticia">
+  <input class="btn btn-lg finalizar" type="submit" value="{{$accion}} Post">
   <a href="{{url('noticia')}}" class="btn btn-lg finalizar" > Finalizar </a>
 </div>
 
